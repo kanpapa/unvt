@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-# UNVT Portable setup script for Raspberry Pi 4
+# UNVT Portable setup script for Raspberry Pi OS Lite(32-bit)
 #
 sudo apt update -y
 sudo apt install -y apache2
