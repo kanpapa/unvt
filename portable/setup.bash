@@ -14,7 +14,7 @@ sudo apt install -y rng-tools
 sudo systemctl stop wpa_supplicant
 sudo systemctl disable wpa_supplicant
 
-sudo cat << EOS | sudo tee -a /etc/dhcpcd.conf
+cat << EOS | sudo tee -a /etc/dhcpcd.conf
 interface wlan0
 static ip_address=192.168.10.10/24
 nohook wpa_supplicant
@@ -23,7 +23,7 @@ EOS
 sudo systemctl restart dhcpcd
 
 # hostapd configuration
-sudo cat << EOS | sudo tee -a /etc/hostapd/hostapd.conf
+cat << EOS | sudo tee -a /etc/hostapd/hostapd.conf
 interface=wlan0
 driver=nl80211
 hw_mode=g
@@ -35,7 +35,7 @@ wpa_passphrase=dronepass21
 rsn_pairwise=CCMP
 EOS
 
-sudo cat << EOS | sudo tee -a /etc/default/hostapd
+cat << EOS | sudo tee -a /etc/default/hostapd
 DAEMON_CONF="/etc/hostapd/hostapd.conf"
 EOS
 
@@ -44,7 +44,7 @@ sudo systemctl enable hostapd
 sudo systemctl start hostapd
 
 # isc-dhcp-server configuration
-sudo cat << EOS | sudo tee -a /etc/dhcp/dhcpd.conf
+cat << EOS | sudo tee -a /etc/dhcp/dhcpd.conf
 subnet 192.168.10.0 netmask 255.255.255.0 {
   range 192.168.10.5 192.168.10.200;
   option broadcast-address 192.168.10.255;
