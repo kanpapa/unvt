@@ -57,7 +57,6 @@
     
     ```bash
     sudo apt install git -y
-    
     ```
     
 3. カレントディレクトリを変更する。
