@@ -120,7 +120,7 @@
 ## 7.Webコンテンツを置く
 
 1. Raspberry Pi 400にログインする。（ユーザ名はpi、パスワードはunvt）
-2. 以下のようにコマンドを入力する。（公式マニュアルの**[1-8-1.](https://github.com/unvt/portable/wiki/1.-How-to-install#1-8-1temporarily-change-permission-on-varwww-to-777)**の作業）
+2. 以下のようにコマンドを入力する。（公式マニュアルの **[1-8-1.　Temporarily change Permission on /var/www to 777](https://github.com/unvt/portable/wiki/1.-How-to-install#1-8-1temporarily-change-permission-on-varwww-to-777)** の作業）
     
     ```bash
     cd /var/www
